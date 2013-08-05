@@ -276,6 +276,11 @@
         offset.left   = offset.left - this.widget.width() + 20;
       }
       
+      if ( this.options.verticalorientation == 'top' ) {
+          offset.top = offset.top - this.height - this.widget.height() - 20;
+          this.widget.addClass( 'top-oriented' );
+      }
+      
       if (this._isInFixed()) {
         position = 'fixed';
         offset.top -= $window.scrollTop();
